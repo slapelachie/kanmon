@@ -15,12 +15,7 @@
 	--main-fg-color-error: #b26d6a;
 
 	--main-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-	--main-font: "Source Code Pro";
-}
-
-@font-face {
-    font-family: "Source Code Pro";
-    src: url("../fonts/SourceCodePro-Regular.ttf");
+	--main-font: "mono";
 }
 
 body {
