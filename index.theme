@@ -1,6 +1,6 @@
 [theme]
-name=lightdm-webkit2-dmg_blue
-description=dmg_blue lightdm theme
+name=Kanmon
+description=Minimal theme
 engine=lightdm-webkit2-greeter
 url=index.html
-session=bspwm
+session=dwm

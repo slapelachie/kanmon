@@ -112,6 +112,7 @@ class DmgBlueTheme {
             event.preventDefault();
             if (_self.auth_pending) {
                 _self.$login_button.prop('disabled', true);
+                _self.$login_button.html('Authenticating...')
                 _self.submit_password(event);
             }
         });

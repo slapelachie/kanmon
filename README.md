@@ -1,8 +1,7 @@
-# lightdm-webkit2-dmg_blue
+# Kanmon
+Modification of [lightdm-webkit2-dmg_blue](https://github.com/davidmogar/lightdm-webkit2-dmg_blue)
 
-Simple LightDM Webkit2 theme to match my desktop.
-
-![Image](https://github.com/davidmogar/lightdm-webkit2-dmg_blue/blob/resources/dmg_blue.png)
+![Image](images/screenshot.png)
 
 ## Features
 
@@ -17,7 +16,7 @@ This theme is designed to be simple, so it provides the bare minimum to be usabl
 The theme depends on `lightdm-webkit2-greeter`. This package can be installed in Arch Linux with `pacman -S --needed lightdm-webkit2-greeter`. Once done:
 
 * Git clone this repository into `/usr/share/lightdm-webkit/themes/`
-* Edit `/etc/lightdm/lightdm-webkit2-greeter.conf` and set `webkit_theme` to `lightdm-webkit2-dmg_blue`.
+* Edit `/etc/lightdm/lightdm-webkit2-greeter.conf` and set `webkit_theme` to `lightdm-webkit2-kanmon`.
 
 
 ## License

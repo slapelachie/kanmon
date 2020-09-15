@@ -1,28 +1,38 @@
 @import url("reset.css");
 
 :root {
-	--main-accent-color: #3366ff;
-	--main-accent-color-hover: #598bff;
-	--main-bg-color: #151a30;
-	--main-bg-color-disabled: #1b233b;
-	--main-bg-color-input: #1a2138;
-	--main-bg-color-panel: #222b45;
-	--main-bg-color-selected: #2e3a59;
-	--main-border-color: #101426;
-	--main-fg-color: #fff;
-	--main-fg-color-dimmed: #6a748d;
-	--main-fg-color-error: #ff3d71;
+	--main-accent-color: #826a47;
+	--main-accent-color-hover: #b7a073;
+	--main-bg-color: #242429;
+	--main-bg-color-disabled: #b7a073;
+	--main-bg-color-input: #171419;
+	--bar-color: #141419;
+	--main-bg-color-panel: #141419;
+	--main-bg-color-selected: #141419;
+	--main-border-color: #141419;
+	--main-fg-color: #fbfbf6;
+	--main-fg-color-dimmed: #767972;
+	--main-fg-color-error: #b26d6a;
 
 	--main-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.6);
-	--main-font: "Noto Sans";
+	--main-font: "Source Code Pro";
+}
+
+@font-face {
+    font-family: "Source Code Pro";
+    src: url("../fonts/SourceCodePro-Regular.ttf");
 }
 
 body {
-	 background-color: var(--main-bg-color);
+	 /*background-color: var(--main-bg-color);*/
+	 background-image: url("../images/lockscreen.png");
+	 background-repeat: no-repeat;
+	 background-attachment: fixed;
+	 background-position: center; 
 	 bottom: 0;
 	 color: var(--main-fg-color);
 	 font-family: var(--main-font);
-	 font-size: 15px;
+	 font-size: 12px;
 	 left: 0;
 	 position: absolute;
 	 right: 0;
@@ -125,7 +135,6 @@ form button {
 form button:disabled,
 form button:disabled:hover {
     background-color: var(--main-bg-color-disabled);
-    color: var(--main-fg-color-dimmed);
     cursor: default;
 }
 
@@ -171,7 +180,7 @@ form .select {
 }
 
 #bar {
-	background-color: var(--main-bg-color-input);
+	background-color: var(--bar-color);
 	box-shadow: var(--main-box-sadow);
 	cursor: default;
 	display: flex;
@@ -200,7 +209,7 @@ form .select {
 	cursor: pointer;
     display: none;
 	fill: var(--main-fg-color);
-	padding: 0.33em 0.8em;
+	padding: 0.33em 0.44em;
 	width: 1.5em !important;
 }
 
@@ -211,7 +220,7 @@ form .select {
 }
 
 #session .select {
-	top: -0.7em;
+	top: -0.99em;
 }
 
 #session .select-value {
