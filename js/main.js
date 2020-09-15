@@ -4,8 +4,14 @@
 var _self = null;
 var _util = null;
 
-class DmgBlueTheme {
+auth_fail_messages = [
+    "Utsu!",
+    "Ding dong your password is wrong",
+    "PAM does not agree",
+    "Are you fucking braindead?",
+]
 
+class DmgBlueTheme {
     constructor() {
         if (_self !== null) {
             return _self;
@@ -14,6 +20,7 @@ class DmgBlueTheme {
 
         this.auth_pending = false;
 
+        this.$pc_name = $('#pc-name');
         this.$error_message = $('#error-message');
         this.$login_button = $('form button');
         this.$password = $('#password');
@@ -34,6 +41,7 @@ class DmgBlueTheme {
      * We check to see if the user successfully authenticated and if so tell the LDM
      * Greeter to log them in with the session they selected.
      */
+
     authentication_complete() {
         var selected_session = _self.$session.attr('id');
 
@@ -44,8 +52,10 @@ class DmgBlueTheme {
         if (lightdm.is_authenticated) {
             lightdm.login(lightdm.authentication_user, selected_session);
         } else {
-            _self.$error_message.text("Oops... the authentication failed. Let's try again.");
+            let fail_message = auth_fail_messages[Math.floor(Math.random() * auth_fail_messages.length)];
+            _self.$error_message.text(fail_message);
             _self.$password.val('');
+            _self.$login_button.html('Login')
             _self.start_authentication();
         }
     }
@@ -68,6 +78,7 @@ class DmgBlueTheme {
         this.prepare_session_list();
         this.prepare_users_list();
         this.register_callbacks();
+        _self.$pc_name.text(window.lightdm.hostname);
     }
 
     /**
