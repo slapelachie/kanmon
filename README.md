@@ -10,6 +10,8 @@ This theme is designed to be simple, so it provides the bare minimum to be usabl
 * Selection of session (fetching the list of installed desktop environments).
 * Session cache for each user, remembering the last session used.
 * Shutdown and restart buttons.
+* Displaying hostname
+* Displaying current time
 
 ## Installation instructions
 
