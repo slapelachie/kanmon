@@ -5,10 +5,15 @@ var _self = null;
 var _util = null;
 
 auth_fail_messages = [
-    "Utsu!",
+    "How can't fucking type something so easy",
     "Ding dong your password is wrong",
     "PAM does not agree",
     "Are you fucking braindead?",
+    "Tip your fucking wheelchair over!",
+    "This incident will be reported.",
+    "I came here to laugh at you.",
+    "You're disgusting. This is why you'll always be a virgin",
+    "POV: you can't type"
 ]
 
 class DmgBlueTheme {
@@ -28,6 +33,7 @@ class DmgBlueTheme {
         this.$session = $('#session .select-value');
         this.$sessions_list = $('#session .select-menu');
         this.$shutdown = $('#shutdown');
+        this.$time = $('#time');
         this.$user = $('#users .select-value');
         this.$users_list = $('#users .select-menu');
 
@@ -79,6 +85,7 @@ class DmgBlueTheme {
         this.prepare_users_list();
         this.register_callbacks();
         _self.$pc_name.text(window.lightdm.hostname);
+        setInterval(function(){ updateTime(_self.$time) }, 1000)
     }
 
     /**
@@ -256,3 +263,17 @@ $(window).on('load', () => {
     new DmgBlueThemeUtils();
     new DmgBlueTheme();
 } );
+
+function updateTime(time_location){
+    time_location.html(getTime())
+}
+
+function getTime(){
+    date = new Date()
+    return `${pad(date.getHours(), 2)}:${pad(date.getMinutes(), 2)}`
+}
+
+function pad(n, width) {
+  n = n + '';
+  return n.length >= width ? n : new Array(width - n.length + 1).join(0) + n;
+}
