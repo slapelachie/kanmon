@@ -1,15 +1,15 @@
 @import url("reset.css");
 
 :root {
-	--main-accent-color: #826a47;
-	--main-accent-color-hover: #b7a073;
+	--main-accent-color: #ba5c6b;
+	--main-accent-color-hover: #c87e8d;
 	--main-bg-color: #242429;
-	--main-bg-color-disabled: #b7a073;
-	--main-bg-color-input: #171419;
-	--bar-color: #141419;
-	--main-bg-color-panel: #141419;
-	--main-bg-color-selected: #141419;
-	--main-border-color: #141419;
+	--main-bg-color-disabled: #c87e8d;
+	--main-bg-color-input: #262f37;
+	--bar-color: #38424a;
+	--main-bg-color-panel: #262f37;
+	--main-bg-color-selected: #262f37;
+	--main-border-color: #262f37;
 	--main-fg-color: #fbfbf6;
 	--main-fg-color-dimmed: #ababa6;
 	--main-fg-color-error: #b26d6a;
